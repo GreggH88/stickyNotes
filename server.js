@@ -2,7 +2,9 @@
 const express = require("express");
 
 // import routes
-const routes = require("./routes");
+const apiRoutes = require("./routes/api/apiRoutes.js");
+const htmlRoutes = require("./routes/html/htmlRoutes.js");
+
 
 // create new express server
 const app = express();
@@ -18,7 +20,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // turn on routes
-app.use(routes);
+app.use(apiRoutes);
+app.use(htmlRoutes);
 
 // turn on express app / server
 app.listen(PORT, () => console.log(`🌎 => now connected on ${PORT}`));

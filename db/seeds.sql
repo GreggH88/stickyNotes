@@ -1,11 +1,7 @@
-USE stickyNotesDB;
+USE notetaker_db;
 
 INSERT INTO notes
-(title, message)
+(title, text)
 VALUES
-("Homework", "Figure this shit ouuuut.");
-
-INSERT INTO notes
-(title, message)
-VALUES
+("Homework", "Figure this shit ouuuut."),
 ("SuperBowl", "Short break for drinks and chicken and handegg.");

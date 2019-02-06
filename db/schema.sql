@@ -1,12 +1,12 @@
-DROP TABLE IF EXISTS stickyNotesDB;
+DROP DATABASE IF EXISTS notetaker_db;
+CREATE DATABASE notetaker_db;
 
-CREATE DATABASE stickyNotesDB;
+USE notetaker_db;
 
-USE stickyNotesDB;
-
-CREATE TABLE notes
-(
-	id INT NOT NULL auto_increment PRIMARY KEY,
-	title VARCHAR(50) NOT NULL,
-  message VARCHAR(250) NOT NULL,
+CREATE TABLE notes (
+  id INT NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  text TEXT NOT NULL,
+  created_at DATETIME default NOW(),
+  PRIMARY KEY (id)
 );

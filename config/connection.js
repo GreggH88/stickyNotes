@@ -1,5 +1,5 @@
 var mysql = require("mysql");
-
+// require('dotenv').config();
 var db;
 
 // Sets up db to connect locally or on JAWSDB if deployed
@@ -9,8 +9,8 @@ if (process.env.JAWSDB_URL) {
   db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: process.env.sqlPass,
-    database: "stickyNotesDB"
+    password: "08816674b",
+    database: "notetaker_db"
   });
 }
 
